@@ -1,10 +1,17 @@
 package com.company;
 
+import com.company.auto.Autovehicul;
 import com.company.auto.AutovehiculCombustibil;
 import com.company.auto.AutovehiculElectric;
+import com.company.figuri.Cerc;
+import com.company.figuri.Figura;
+import com.company.figuri.Patrat;
+import com.company.gadget.ElectricDevice;
+import com.company.gadget.Gadget;
 import com.company.gadget.Laptop;
 import com.company.gadget.Trotineta;
 import com.company.person.Programator;
+import com.company.service.AfisareService;
 
 public class Main {
 
@@ -16,29 +23,50 @@ public class Main {
 
         // Mostenire - Mostenim toate metodele si variabilele de la clasa parinte
 
+        // Abstractizarea - Obligatiunea copiilor de a implementa metodele abstracte ale parentelui
+
+        // Polimorfizm - Posibiliatatea ca o clasa sa preia mai multe forme (Atunci cand clasa parinte poate primit ca parametru orice copil
+        //                                                                              al sau si poate afisa metodele speicifice a acestora)
+
         // Manager, Programator -> Person
 
-        Programator programator = new Programator();
-        programator.setAge(22);
-        programator.setNume("Ion");
-
-//        AutovehiculElectric tesla = new AutovehiculElectric();
-//        tesla.model = "Model 3";
-//        tesla.producator = "Tesla";
+//        afisareAutovehicul(new AutovehiculCombustibil());
+//        afisareAutovehicul(new AutovehiculElectric());
 //
-//       AutovehiculCombustibil bmw = new AutovehiculCombustibil();
-//       bmw.capacitateMotor = 3;
-//       bmw.producator = "bmw";
-//       bmw.model = "seria 3";
+//
+//        Autovehicul autovehiculCombustibil2 = new AutovehiculCombustibil();
+//        Autovehicul autovehiculCombustibil3 = new AutovehiculElectric();
 
-        Laptop laptop = new Laptop();
-        laptop.setClaviatura("EN");
-        laptop.setDeumire("HP");
-        laptop.setOreIncarcare(2);
+//        AfisareService afisareService = new AfisareService();
+//
+//        afisareService.afisare(new Gadget(5000, 50, 2, "Gadget"));
+//        afisareService.afisare(new Laptop(2000, 20, 4, "Laptop"));
+//        afisareService.afisare(new Trotineta(3000, 30, 3, "Trotineta"));
+//        afisareService.afisare(new ElectricDevice(4000, 40, 4, "ElectricDevice"));
 
-        Trotineta trotineta = new Trotineta();
-        trotineta.setDeumire("Xiaomi");
-        trotineta.setViteza(200);
-        trotineta.setOreIncarcare(5);
+
+        Figura figura1 = new Patrat();
+        Figura figura2 = new Cerc();
+
+        figura1.calculareArea();
+        figura2.calculareArea();
+
+
     }
+
+//    public static void afisareAutovehiculComb(AutovehiculCombustibil autovehiculCombustibil) {
+//        System.out.println(autovehiculCombustibil.getNume());
+//        System.out.println(autovehiculCombustibil.getProducator());
+//    }
+//
+//    public static void afisareAutovehiculElec(AutovehiculElectric  autovehiculElectric) {
+//        System.out.println(autovehiculElectric.getNume());
+//        System.out.println(autovehiculElectric.getProducator());
+//    }
+
+    public static void afisareAutovehicul(Autovehicul autovehicul) {
+        System.out.println(autovehicul.getNume());
+        System.out.println(autovehicul.getProducator());
+    }
+
 }

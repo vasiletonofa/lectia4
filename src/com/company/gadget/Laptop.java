@@ -6,6 +6,11 @@ public class Laptop extends Gadget {
     private String claviatura;
     private String monitor;
 
+
+    public Laptop(int capacitate, int kw, int oreIncarcare,String deumire) {
+        super(capacitate, kw, oreIncarcare, deumire);
+    }
+
     public String getCpu() {
         return cpu;
     }

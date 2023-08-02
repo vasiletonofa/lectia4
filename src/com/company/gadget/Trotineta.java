@@ -7,6 +7,10 @@ public class Trotineta extends Gadget {
     private int persoane;
 
 
+    public Trotineta(int capacitate, int kw, int oreIncarcare, String deumire) {
+        super(capacitate, kw, oreIncarcare, deumire);
+    }
+
     public int getKw() {
         return kw;
     }

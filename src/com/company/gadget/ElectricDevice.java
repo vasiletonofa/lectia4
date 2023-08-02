@@ -4,6 +4,16 @@ public class ElectricDevice {
     private int capacitateBatereie;
     private int kw;
     private int oreIncarcare;
+    private String deumire;
+
+
+    public ElectricDevice(int capacitate, int kw, int oreIncarcare, String deumire) {
+        setCapacitateBatereie(capacitate);
+        setKw(kw);
+        setOreIncarcare(oreIncarcare);
+        setDeumire(deumire);
+    }
+
 
     public int getCapacitateBatereie() {
         return capacitateBatereie;
@@ -27,5 +37,13 @@ public class ElectricDevice {
 
     public void setOreIncarcare(int oreIncarcare) {
         this.oreIncarcare = oreIncarcare;
+    }
+
+    public String getDeumire() {
+        return deumire;
+    }
+
+    public void setDeumire(String deumire) {
+        this.deumire = deumire;
     }
 }

@@ -1,18 +1,15 @@
 package com.company.gadget;
 
 public class Gadget extends ElectricDevice {
-    private String deumire;
+
     private int price;
     private String model;
     private String producator;
 
-    public String getDeumire() {
-        return deumire;
+    public Gadget(int capacitate, int kw, int oreIncarcare, String deumire) {
+        super(capacitate, kw, oreIncarcare, deumire);
     }
 
-    public void setDeumire(String deumire) {
-        this.deumire = deumire;
-    }
 
     public int getPrice() {
         return price;
